@@ -45,5 +45,4 @@
         <permission name="android.permission.USER_ACTIVITY"/>
         <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
     </privapp-permissions>
-
 </permissions>

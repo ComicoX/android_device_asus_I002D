@@ -79,7 +79,8 @@ PRODUCT_PACKAGES_DEBUG += \
     bootctl
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+
 
 # ZenParts
 PRODUCT_PACKAGES += \
@@ -90,6 +91,15 @@ PRODUCT_PACKAGES += \
     animation.txt \
     font_charger.png
 
+# Common init scripts
+PRODUCT_PACKAGES += \
+    init.asus.rc \
+    init.asus.usb.rc \
+    init.qcom.factory.rc \
+    init.qcom.rc \
+    init.recovery.qcom.rc \
+    init.target.rc \
+    fstab.qcom
 # Display
 PRODUCT_PACKAGES += \
     libion \
@@ -138,12 +148,11 @@ PRODUCT_PACKAGES += \
     netutils-wrapper-1.0 \
     libandroid_net
 
-# Prebuilt
 PRODUCT_COPY_FILES += \
-    $(call find-copy-subdir-files,*,device/asus/I002D/prebuilt/root,recovery/root) \
-    $(call find-copy-subdir-files,*,device/asus/I002D/prebuilt/product,product) \
-    $(call find-copy-subdir-files,*,device/asus/I002D/prebuilt/system,system) \
-    $(call find-copy-subdir-files,*,device/asus/I002D/prebuilt/system_ext,system_ext)
+    $(LOCAL_PATH)/configs/permissions/privapp-permissions-ASUS_I002D.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-ASUS_I002D.xml \
+    $(LOCAL_PATH)/configs/permissions/public.libraries-qti-ext.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-qti.txt \
+    $(LOCAL_PATH)/configs/permissions/public.libraries-qti.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-qti.txt
+
 
 # Properties
 BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
@@ -209,7 +218,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Vibrator
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/excluded-input-devices.xml:system/etc/excluded-input-devices.xml
+    vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
 
 # Wifi
 PRODUCT_PACKAGES += \
