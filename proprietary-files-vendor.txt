@@ -1,5 +1,5 @@
 # All blobs, unless pinned, are extracted from:
-# 11/RKQ1.200710.002/30.41.69.143_20211222:user/release-keys
+# 11/RKQ1.200710.002/30.41.69.152_20220128:user/release-keys
 -vendor/app/CACertService/CACertService.apk
 -vendor/app/CneApp/CneApp.apk
 -vendor/app/com.qualcomm.qti.gpudrivers.kona.api30/com.qualcomm.qti.gpudrivers.kona.api30.apk
