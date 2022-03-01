@@ -45,7 +45,7 @@ write_headers "I002D"
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files.txt" true
 
-write_makefiles "${MY_DIR}/proprietary-files-product.txt" true
+write_makefiles "${MY_DIR}/proprietary-files-vendor.txt" true
 
 # Finish
 write_footers

@@ -1,0 +1,8 @@
+allow init {
+    motor_file
+    vendor_configs_file
+    xrom_file
+    demoapp_file
+    log_file
+    bat_file
+}:dir mounton;

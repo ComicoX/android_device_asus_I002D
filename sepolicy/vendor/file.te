@@ -1,0 +1,17 @@
+# Files in rootfs
+type asdf_file, file_type;
+type bat_file, file_type;
+type demoapp_file, file_type;
+type log_file, file_type;
+type motor_file, file_type;
+type persist_file, file_type;
+type xrom_file, file_type;
+
+# Files in proc
+type proc_touchscreen, proc_type, sysfs_type, fs_type;
+type asus_display_proc_exec, proc_type;
+type asus_motor_proc, proc_type;
+
+# Sysfs
+type asus_display_sysfs, sysfs_type, fs_type;
+type asus_motor_sys, sysfs_type, fs_type;

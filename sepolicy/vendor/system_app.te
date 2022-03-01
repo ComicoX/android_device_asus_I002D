@@ -1,0 +1,12 @@
+hal_client_domain(system_app, hal_display_iris)
+allow system_app asus_bspcam_hwservice:hwservice_manager find;
+allow system_app self:netlink_kobject_uevent_socket { bind setopt };
+allow system_app self:netlink_kobject_uevent_socket create;
+allow system_app self:netlink_kobject_uevent_socket read;
+
+allow system_app motor_device:chr_file rw_file_perms;
+set_prop(system_app, vendor_motor_prop)
+get_prop(system_app, vendor_motor_prop)
+
+allow system_app asus_motor_proc:file { open read write getattr};
+allow system_app asus_motor_sys:file { getattr open read write };

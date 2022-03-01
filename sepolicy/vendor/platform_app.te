@@ -1,0 +1,4 @@
+hal_client_domain(platform_app, hal_display_iris)
+allow platform_app app_data_file:file { execute };
+allow platform_app rs_exec:file { execute execute_no_trans r_file_perms };
+allow platform_app system_lib_file:file lock;
