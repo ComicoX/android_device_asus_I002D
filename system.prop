@@ -216,7 +216,7 @@ vendor.camera.night=6:1;7:1;2:1;4:1;3:0;5:0;10:1;11:1
 vendor.camera.atdtest=6:11;2:0;3:0
 
 # Havoc-OS
-ro.havoc.device.name=Asus Zenfone 7
-ro.havoc.group.url=https://t.me/havoc_i002d
-ro.havoc.maintainer=Raileanu Cosmin (Comico)
+ro.havoc.device.name=Asus ZenFone 7 / 7 Pro
+ro.havoc.group.url=https://t.me/+n8WnpaOickA2Yzc0
+ro.havoc.maintainer=Raileanu Cosmin
 ro.havoc.maintainer.username=ComicoX
