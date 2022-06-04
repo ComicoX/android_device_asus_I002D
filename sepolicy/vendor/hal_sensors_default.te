@@ -1,1 +1,13 @@
-allow hal_sensors_default sensors_device:chr_file r_file_perms;
+allow hal_sensors_default sensors_device:chr_file rw_file_perms;
+allow hal_sensors_default property_socket:sock_file write;
+allow hal_sensors_default sysfs:file { read write };
+allow hal_sensors_default asus_sensors_prop:property_service { set };
+allow hal_sensors_default asus_sensors_prop:file { read getattr map open };
+allow hal_sensors_default init:unix_stream_socket connectto;
+allow hal_sensors_default sysfs:file open;
+allow hal_sensors_default asus_sensors_dev:chr_file { ioctl read write getattr lock append map open watch watch_reads };
+allow hal_sensors_default vendor_thermal_prop:file { read };
+allow hal_sensors_default vendor_thermal_prop:property_service { set };
+get_prop(hal_sensors_default, vendor_motor_prop)
+allow hal_sensors_default vendor_motor_prop:file read;
+allow hal_sensors_default vendor_motor_prop:property_service { set };

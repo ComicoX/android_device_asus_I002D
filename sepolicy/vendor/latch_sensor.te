@@ -1,0 +1,15 @@
+type latch_sensor, domain;
+allow latch_sensor latch_sensor_exec:file { read getattr map execute open entrypoint };
+allow latch_sensor asus_halls_sysfs:file { read write getattr open };
+#allow latch_sensor mnt_vendor_file_30_0:file { ioctl read getattr lock map open watch watch_reads };
+#allow latch_sensor mnt_vendor_file_30_0:dir { ioctl read write getattr lock open watch watch_reads add_name search };
+#allow latch_sensor mnt_vendor_file_30_0:file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };
+#allow latch_sensor mnt_vendor_file_30_0:file { read open };
+#allow latch_sensor vendor_shell_exec_30_0:file { entrypoint };
+#allow latch_sensor kmsg_device_30_0:chr_file { write open };
+#allow latch_sensor vendor_toolbox_exec_30_0:file { execute_no_trans };
+allow latch_sensor vendor_shell_exec:file entrypoint;
+allow latch_sensor kmsg_device:chr_file { write getattr open };
+allow latch_sensor mnt_vendor_file:dir search;
+allow latch_sensor mnt_vendor_file:file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };
+allow latch_sensor vendor_toolbox_exec:file execute_no_trans;

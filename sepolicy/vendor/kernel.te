@@ -6,5 +6,5 @@ allow kernel bat_file:file { read write create open };
 allow kernel log_file:dir rw_dir_perms;
 allow kernel log_file:file create_file_perms;
 
-allow kernel motor_file:dir { read write add_name search };
-allow kernel motor_file:file { read write create open };
+allow kernel asus_motor_file:dir { read write add_name search remove_name };
+allow kernel asus_motor_file:file { read write create open unlink };

@@ -7,10 +7,22 @@
 /dev/block/platform/soc/1d84000\.ufshc/by-name/batinfo                  u:object_r:asus_block_device:s0
 
 # Devices
-/dev/goodix_fp          u:object_r:fingerprintd_device:s0
-/dev/lsensor            u:object_r:sensors_device:s0
-/dev/psensor            u:object_r:sensors_device:s0
-/dev/asusMotoDrv        u:object_r:motor_device:s0
+/dev/goodix_fp           u:object_r:fingerprintd_device:s0
+/dev/lsensor             u:object_r:sensors_device:s0
+/dev/psensor             u:object_r:sensors_device:s0
+/dev/psensor_2nd         u:object_r:sensors_device:s0
+/dev/asusMotoDrv         u:object_r:asus_motor_device:s0
+/dev/asus2ndAccelSensor  u:object_r:asus_sensors_dev:s0               
+/dev/asus2ndGyroSensor   u:object_r:asus_sensors_dev:s0
+/dev/asusLightSensor     u:object_r:asus_sensors_dev:s0
+/dev/asusLightSensor_2nd u:object_r:asus_sensors_dev:s0                        
+/dev/asusProxSensor      u:object_r:asus_sensors_dev:s0
+/dev/asusProxSensor_2nd  u:object_r:asus_sensors_dev:s0
+
+# Motor
+/motor_fw1(/.*)?		u:object_r:asus_motor_file:s0
+/motor_fw2(/.*)?		u:object_r:asus_motor_file:s0
+
 
 # Files in rootfs
 /ADF(/.*)?              u:object_r:demoapp_file:s0
@@ -24,10 +36,6 @@
 /dsp                    u:object_r:rootfs:s0
 /xrom(/.*)?             u:object_r:xrom_file:s0
 
-# Motor
-/motor_fw1(/.*)?		u:object_r:motor_file:s0
-/motor_fw2(/.*)?		u:object_r:motor_file:s0
-
 # Files in sysfs
 /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/thermal_gpio                    u:object_r:sysfs_battery_supply:s0
 /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/TypeC_Side_Detect2              u:object_r:sysfs_battery_supply:s0
@@ -37,6 +45,9 @@
 
 # Binaries
 /vendor/bin/awk                                                                                 u:object_r:vendor_toolbox_exec:s0
+/(product|system/product)/bin/dpmd        u:object_r:vendor_dpmd_exec:s0
 
 /(product|system/product)/vendor_overlay/[0-9]+/etc(/.*)?	u:object_r:vendor_configs_file:s0
 /(product|system/product)/vendor_overlay/[0-9]+/lib(64)?/hw	u:object_r:vendor_hal_file:s0
+# Rild
+/(vendor|system/vendor)/radio/qcril_database/qcril.db			u:object_r:rild_file:s0

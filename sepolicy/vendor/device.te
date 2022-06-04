@@ -2,4 +2,5 @@ type asdf_block_device, dev_type;
 type asus_block_device, dev_type;
 
 type fingerprintd_device, dev_type;
-type motor_device, dev_type;
+type asus_motor_device, dev_type, mlstrustedobject;
+type asus_sensors_dev, dev_type;

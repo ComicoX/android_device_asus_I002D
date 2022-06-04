@@ -3,15 +3,22 @@ type asdf_file, file_type;
 type bat_file, file_type;
 type demoapp_file, file_type;
 type log_file, file_type;
-type motor_file, file_type;
+type asus_motor_file, file_type;
 type persist_file, file_type;
 type xrom_file, file_type;
 
 # Files in proc
 type proc_touchscreen, proc_type, sysfs_type, fs_type;
 type asus_display_proc_exec, proc_type;
-type asus_motor_proc, proc_type;
+type asus_motor_proc, proc_type, fs_type, mlstrustedobject;
 
 # Sysfs
 type asus_display_sysfs, sysfs_type, fs_type;
-type asus_motor_sys, sysfs_type, fs_type;
+type asus_halls_sysfs, sysfs_type, fs_type, mlstrustedobject;
+type latch_sensor_exec, file_type, exec_type, vendor_file_type;
+type asusfw_file, file_type;
+type asus_sp_exec, file_type, exec_type, vendor_file_type;
+type asus_sensors_exec, file_type, exec_type, vendor_file_type;
+
+# Rild
+type rild_file, file_type, vendor_file_type;

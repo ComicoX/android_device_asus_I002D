@@ -4,9 +4,15 @@ allow system_app self:netlink_kobject_uevent_socket { bind setopt };
 allow system_app self:netlink_kobject_uevent_socket create;
 allow system_app self:netlink_kobject_uevent_socket read;
 
-allow system_app motor_device:chr_file rw_file_perms;
-set_prop(system_app, vendor_motor_prop)
-get_prop(system_app, vendor_motor_prop)
+allow system_app asus_motor_device:chr_file { ioctl read write getattr lock append map open watch watch_reads };
+allow system_app asus_halls_sysfs:file { read write getattr open };
+allow system_app vendor_motor_prop:file { read getattr map open };
+auditallow system_app vendor_motor_prop:property_service set;
 
-allow system_app asus_motor_proc:file { open read write getattr};
-allow system_app asus_motor_sys:file { getattr open read write };
+allow system_app asus_motor_proc:file { read write getattr open };
+allow system_app asus_halls_sysfs:file { read write getattr open };
+allow system_app sysfs_zram:dir search;
+
+get_prop(system_app, vendor_camera_prop)
+get_prop(system_app, vendor_persist_camera_prop)
+get_prop(system_app, vendor_motor_prop)

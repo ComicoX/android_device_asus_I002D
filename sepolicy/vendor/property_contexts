@@ -3,8 +3,10 @@ vendor.bluetooth.a2dp.getSinkLatency    u:object_r:vendor_bluetooth_prop:s0
 vendor.camera.                u:object_r:vendor_camera_prop:s0
 vendor.goodix.                u:object_r:vendor_gx_fpd_prop:s0
 persist.vendor.nfc.           u:object_r:vendor_nfc_prop:s0
-vendor.gsm.sim1.present       u:object_r:exported3_radio_prop:s0
-vendor.gsm.sim2.present       u:object_r:exported3_radio_prop:s0
+vendor.gsm.sim1.present       u:object_r:vendor_rild_prop:s0
+vendor.gsm.sim2.present       u:object_r:vendor_rild_prop:s0
+gsm.sim1.present              u:object_r:exported_system_prop:s0
+gsm.sim2.present              u:object_r:exported_system_prop:s0
 vendor.tel.                   u:object_r:exported3_radio_prop:s0
 ro.vendor.csc.modemhash1      u:object_r:exported3_radio_prop:s0
 ro.vendor.csc.modemhash2      u:object_r:exported3_radio_prop:s0
@@ -13,9 +15,33 @@ ro.camera.res.fmq.size u:object_r:exported_system_prop:s0 exact int
 ro.camera.req.fmq.size u:object_r:exported_system_prop:s0 exact int
 ro.product.system.manufacturer u:object_r:exported_system_prop:s0 exact int
 
+ro.asus.screen.colortemp.enable          u:object_r:vendor_asus_prop:s0
 
-persist.vendor.asus.motorservice.  u:object_r:vendor_motor_prop:s0
-persist.vendor.asus.disable_motor  u:object_r:vendor_motor_prop:s0
-persist.vendor.asus.enable_motor   u:object_r:vendor_motor_prop:s0
+persist.vendor.asus.motorservice.        u:object_r:vendor_motor_prop:s0
+persist.vendor.asus.disable_motor        u:object_r:vendor_motor_prop:s0
+persist.vendor.asus.enable_motor         u:object_r:vendor_motor_prop:s0
+persist.camera.gyro.                     u:object_r:vendor_motor_prop:s0
+persist.vendor.asus.gyrosensor2calibx    u:object_r:vendor_motor_prop:s0
+persist.vendor.asus.gyrosensor2caliby    u:object_r:vendor_motor_prop:s0
+persist.vendor.asus.gyrosensor2calibz    u:object_r:vendor_motor_prop:s0
+persist.vendor.asus.gyrosensor2calibtime u:object_r:vendor_motor_prop:s0
+persist.vendor.asus.fall_protection_duration u:object_r:vendor_motor_prop:s0
+persist.vendor.asus.fall_protection_g    u:object_r:vendor_motor_prop:s0
 
-#persist.vendor.asus.gps.           u:object_r:gps_data_file:s0
+persist.vendor.asus.gps.                 u:object_r:vendor_asus_prop:s0
+persist.vendor.asus.agps.                u:object_r:vendor_asus_prop:s0
+persist.vendor.sys.cta.security          u:object_r:system_prop:s0
+
+vendor.asus.ddr_info                     u:object_r:vendor_asus_prop:s0
+ro.vendor.asus.network.types             u:object_r:vendor_asus_prop:s0
+vendor.asus.storage.primary.health       u:object_r:vendor_asus_prop:s0
+
+vendor.telephony.default_network         u:object_r:vendor_rild_prop:s0
+
+#ro.vendor.wifimac
+#ro.vendor.wifimac_2                         vendor_asus_prop
+#vendor.wifi.version.driver
+#ro.vendor.atd.memvendor
+
+#vendor.touch.version.driver
+#vendor.fp.version.driver

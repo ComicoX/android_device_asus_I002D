@@ -1,0 +1,15 @@
+type asus_sensors, domain, dev_type;
+allow asus_sensors asus_sensors_exec:file { read getattr map execute open entrypoint };
+allow asus_sensors asus_sensors_dev:chr_file { ioctl read write getattr lock append map open watch watch_reads };
+allow asus_sensors asus_sensors_exec:file { getattr map execute execute_no_trans };
+allow asus_sensors asus_sensors_prop:property_service { set };
+allow asus_sensors asus_sensors_prop:file { read getattr map open };
+allow asus_sensors asus_sensors_exec:file { read getattr map execute open entrypoint };
+#allow asus_sensors property_socket_30_0:sock_file { write };
+#allow asus_sensors kmsg_device_30_0:chr_file { write getattr open };
+#allow asus_sensors vendor_toolbox_exec_30_0:file { getattr map execute execute_no_trans };
+#allow asus_sensors vendor_file_30_0:file { getattr map execute execute_no_trans };
+#allow asus_sensors vendor_shell_exec_30_0:file { entrypoint };
+#allow asus_sensors mnt_vendor_file_30_0:file { ioctl read write create getattr setattr lock append map unlink rename open watch watch_reads };
+#allow asus_sensors sysfs_30_0:file { ioctl read write getattr lock append map open watch watch_reads };
+#allow asus_sensors init_30_0:unix_stream_socket { connectto };

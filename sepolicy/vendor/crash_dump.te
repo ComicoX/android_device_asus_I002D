@@ -1,0 +1,1 @@
+allow crash_dump vendor_motor_prop:file open;

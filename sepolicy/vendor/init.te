@@ -1,8 +1,15 @@
 allow init {
-    motor_file
+    asus_motor_file
     vendor_configs_file
     xrom_file
     demoapp_file
     log_file
     bat_file
 }:dir mounton;
+allow init tmpfs:blk_file rw_file_perms;
+allow init latch_sensor:process transition;
+allow init latch_sensor:process { rlimitinh siginh };
+get_prop(init, vendor_motor_prop)
+set_prop(init, vendor_motor_prop)
+
+dontaudit init latch_sensor:process noatsecure;

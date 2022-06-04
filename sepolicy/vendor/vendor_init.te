@@ -5,5 +5,17 @@ allow vendor_init cgroup:file getattr;
 allow vendor_init asus_display_proc_exec:file { read write getattr open };
 allow vendor_init asus_motor_proc:file { read write getattr open setattr };
 allow vendor_init proc:file getattr;
+allow vendor_init persist_debug_prop:file read;
+allow vendor_init vendor_wifi_prop:property_service { set };
+allow vendor_init vendor_asus_prop:file { read getattr map open };
 get_prop(vendor_init, vendor_wifi_prop)
 get_prop(vendor_init, default_prop)
+allow vendor_init proc:file getattr;
+get_prop(vendor_init, vendor_motor_prop)
+set_prop(vendor_init, vendor_motor_prop)
+get_prop(vendor_init, vendor_asus_prop)
+set_prop(vendor_init, vendor_asus_prop)
+set_prop(vendor_init, vendor_camera_prop)
+get_prop(vendor_init, vendor_camera_prop)
+set_prop(vendor_init, vendor_persist_camera_prop)
+get_prop(vendor_init, vendor_persist_camera_prop)

@@ -6,12 +6,46 @@ genfscon sysfs /devices/platform/soc/884000.i2c/i2c-5/5-0010/884000.i2c:qcom,smb
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-5/5-0010/884000.i2c:qcom,smb1390@10:qcom,charge_pump/power_supply/charge_pump_master/cp_die_temp u:object_r:sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-5/5-0010/884000.i2c:qcom,smb1390@10:qcom,charge_pump/power_supply/charge_pump_master/chip_version u:object_r:sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-5/5-0010/884000.i2c:qcom,smb1390@10:qcom,charge_pump/power_supply/charge_pump_master/cp_enable u:object_r:sysfs_battery_supply:s0
-
+genfscon sysfs /devices/platform/soc/884000.i2c/i2c-5/5-0010/884000.i2c:qcom,smb1390@10:qcom,charge_pump/power_supply/charge_pump_master/model_name u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/884000.i2c/i2c-5/5-0010/884000.i2c:qcom,smb1390@10:qcom,charge_pump/power_supply/charge_pump_master/parallel_output_mode u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/884000.i2c/i2c-5/5-0010/884000.i2c:qcom,smb1390@10:qcom,charge_pump/power_supply/charge_pump_master/parallel_mode u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/884000.i2c/i2c-5/5-0010/884000.i2c:qcom,smb1390@10:qcom,charge_pump/power_supply/charge_pump_master/cp_status1 u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/884000.i2c/i2c-5/5-0010/884000.i2c:qcom,smb1390@10:qcom,charge_pump/power_supply/charge_pump_master/cp_status2 u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/884000.i2c/i2c-5/5-0010/884000.i2c:qcom,smb1390@10:qcom,charge_pump/power_supply/charge_pump_master/cp_irq_status u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/884000.i2c/i2c-5/5-0010/884000.i2c:qcom,smb1390@10:qcom,charge_pump/power_supply/charge_pump_master/cp_ilim u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/884000.i2c/i2c-5/5-0010/884000.i2c:qcom,smb1390@10:qcom,charge_pump/power_supply/charge_pump_master/cp_isns u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/soc:richtek,rt-charger/power_supply/rt-chg/online          u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/soc:richtek,rt-charger/power_supply/rt-chg/type            u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/884000.i2c/i2c-6/6-005e/power_supply/pca9468-mains/online  u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/884000.i2c/i2c-6/6-005e/power_supply/pca9468-mains/type    u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/884000.i2c/i2c-6/6-0025/power_supply/wireless/type         u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/884000.i2c/i2c-6/6-0025/power_supply/wireless/online       u:object_r:sysfs_battery_supply:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm8150@0:qcom,pm8150_rtc/rtc u:object_r:sysfs_rtc:s0
 
+genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/trigger_update        u:object_r:asus_halls_sysfs:s0
+genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/X1_threshold          u:object_r:asus_halls_sysfs:s0
+genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/X2_threshold          u:object_r:asus_halls_sysfs:s0
+genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/Y1_threshold          u:object_r:asus_halls_sysfs:s0
+genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/status                u:object_r:asus_halls_sysfs:s0
+genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/state                 u:object_r:asus_halls_sysfs:s0
+genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/X                     u:object_r:asus_halls_sysfs:s0
+genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/Y                     u:object_r:asus_halls_sysfs:s0
+genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/Z                     u:object_r:asus_halls_sysfs:s0
 
 genfscon sysfs /devices/platform/soc/884000.i2c/i2c-5/5-0010/884000.i2c:qcom,smb1390@10:qcom,charge_pump/power_supply/charge_pump_master/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-08/c440000.qcom,spmi:qcom,pmxprairie@8:qcom,power-on@800/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+
+genfscon sysfs /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,sdam-qnovo@b000/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-04/c440000.qcom,spmi:qcom,pm8150l@4:qcom,power-on@800/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm8150@0:qcom,power-on@800/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm8150@0:qcom,pm8150_rtc/rtc/rtc0/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm8150@0:qcom,pm8150_rtc/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qpnp,fg/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/1c10000.qcom,pcie/pci0002:00/0002:00:00.0/0002:01:00.0/0306_02.01.00_EFS/wakeup/wakeup u:object_r:sysfs_wakeup:s0
+
+genfscon sysfs /class/drm/hdr_mode  u:object_r:vendor_sysfs_graphics:s0
+
 genfscon sysfs /devices/platform/soc/1c00000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/1101_00.01.00/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/994000.spi/spi_master/spi0/spi0.0/wakeup/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/0.goodix_gf3626/goodix_fp/goodix_fp/wakeup u:object_r:sysfs_wakeup:s0
@@ -56,7 +90,6 @@ genfscon sysfs /devices/virtual/misc/msm_wma/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_aac/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/misc/msm_ape/wakeup u:object_r:sysfs_wakeup:s0
 
-#genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm8150@0:qcom,pm8150_rtc/rtc/rtc0/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm8150@0:qcom,pm8150_rtc/wakeup u:object_r:sysfs_wakeup:s0
 
 genfscon sysfs /devices/virtual/diag/diag/wakeup u:object_r:sysfs_wakeup:s0
@@ -64,6 +97,7 @@ genfscon sysfs /devices/platform/soc/1c10000.qcom,pcie/pci0002:00/0002:00:00.0/0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-04/c440000.qcom,spmi:qcom,pm8150l@4:qcom,power-on@800/wakeup u:object_r:sysfs_wakeup:s0
 
 genfscon proc /driver/panel_reg_rw                                                              u:object_r:asus_display_proc_exec:s0
+genfscon proc /hbm_mode                                                                         u:object_r:asus_display_proc_exec:s0
 genfscon proc /driver/lcd_fps                                                                   u:object_r:asus_display_proc_exec:s0
 genfscon proc /lcd_unique_id                                                                    u:object_r:asus_display_proc_exec:s0
 genfscon proc /lcd_stage                                                                        u:object_r:asus_display_proc_exec:s0
@@ -85,18 +119,4 @@ genfscon proc /driver/motor_k                                                   
 genfscon proc /driver/motor_wq_run                                                              u:object_r:asus_motor_proc:s0
 genfscon proc /driver/motor_state                                                               u:object_r:asus_motor_proc:s0
 genfscon proc /driver/motor_tk_angle                                                            u:object_r:asus_motor_proc:s0
-genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/state                            u:object_r:asus_motor_sys:s0
-genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/X1_threshold                     u:object_r:asus_motor_sys:s0
-genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/X2_threshold                     u:object_r:asus_motor_sys:s0
-genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/Y1_threshold                     u:object_r:asus_motor_sys:s0
-genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/X                                u:object_r:asus_motor_sys:s0
-genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/Y                                u:object_r:asus_motor_sys:s0
-genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/Z                                u:object_r:asus_motor_sys:s0
-genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/interrupt                        u:object_r:asus_motor_sys:s0
-genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/mode                             u:object_r:asus_motor_sys:s0
-genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/status                           u:object_r:asus_motor_sys:s0
-genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/stxyz                            u:object_r:asus_motor_sys:s0
-genfscon sysfs /devices/platform/soc/984000.i2c/i2c-0/0-000d/hall_sensor2/trigger_update                   u:object_r:asus_motor_sys:s0
-
-#genfscon proc /driver/ois_af_state vendor_camera_data_file
-#/proc/asusevtlog gnns?
+genfscon proc /proc/asusevtlog                                                                  u:object_r:asus_motor_proc:s0

@@ -1,0 +1,5 @@
+allow shell bat_file:dir getattr;
+allow shell linkerconfig_file:dir getattr;
+allow shell asus_motor_file:dir getattr;
+allow shell rootfs:file getattr;
+allow shell xrom_file:dir getattr;
