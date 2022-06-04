@@ -191,10 +191,10 @@ product/etc/permissions/com.qti.snapdragon.sdk.display.xml
 -system_ext/app/colorservice/colorservice.apk
 system_ext/lib64/libsdm-disp-apis.qti.so
 system_ext/lib64/libsd_sdk_display.qti.so
-system_ext/lib64/vendor.display.color@1.0.so
-system_ext/lib64/vendor.display.color@1.1.so
-system_ext/lib64/vendor.display.color@1.2.so
-system_ext/lib64/vendor.display.color@1.3.so
+#system_ext/lib64/vendor.display.color@1.0.so
+#system_ext/lib64/vendor.display.color@1.1.so
+#system_ext/lib64/vendor.display.color@1.2.so
+#system_ext/lib64/vendor.display.color@1.3.so
 
 # GPS
 system_ext/etc/permissions/com.qti.location.sdk.xml
@@ -429,8 +429,8 @@ system_ext/lib64/libwfduibcsrc.so
 system_ext/lib64/libwfduibcsrcinterface.so
 system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
 
-#system/lib64/libchrome.so
-#system/lib/libchrome.so
+system/lib64/libchrome.so
+system/lib/libchrome.so
 
 # Wlan
 -system_ext/framework/vendor.qti.hardware.data.iwlan-V1.0-java.jar

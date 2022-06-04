@@ -96,6 +96,18 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bin/BackupCalibrationData:$(TARGET_COPY_OUT_SYSTEM)/bin/BackupCalibrationData \
+    $(LOCAL_PATH)/bin/CameraOTP:$(TARGET_COPY_OUT_SYSTEM)/bin/CameraOTP \
+    $(LOCAL_PATH)/bin/Camera_Unique_ID:$(TARGET_COPY_OUT_SYSTEM)/bin/Camera_Unique_ID \
+    $(LOCAL_PATH)/bin/dit_ae_cali:$(TARGET_COPY_OUT_SYSTEM)/bin/dit_ae_cali \
+    $(LOCAL_PATH)/bin/dit_af_cali:$(TARGET_COPY_OUT_SYSTEM)/bin/dit_af_cali \
+    $(LOCAL_PATH)/bin/ditbsp:$(TARGET_COPY_OUT_SYSTEM)/bin/ditbsp \
+    $(LOCAL_PATH)/bin/dit_cali:$(TARGET_COPY_OUT_SYSTEM)/bin/dit_cali \
+    $(LOCAL_PATH)/bin/dit_cali_golden:$(TARGET_COPY_OUT_SYSTEM)/bin/dit_cali_golden \
+    $(LOCAL_PATH)/bin/DIT_LaserOn:$(TARGET_COPY_OUT_SYSTEM)/bin/DIT_LaserOn \
+    $(LOCAL_PATH)/bin/RestoreCalibrationData:$(TARGET_COPY_OUT_SYSTEM)/bin/RestoreCalibrationData
+
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
@@ -345,27 +357,15 @@ PRODUCT_PACKAGES += \
 
 # NFC
 PRODUCT_PACKAGES += \
-    android.hardware.nfc@1.0:64 \
-    android.hardware.nfc@1.1:64 \
-    android.hardware.nfc@1.2:64 \
-    android.hardware.secure_element@1.2 \
+    android.hardware.nfc@1.2-service \
     com.android.nfc_extras \
-    com.nxp.nfc.nq \
-    jcos_nq_client \
-    libchrome \
-    libchrome.vendor \
-    libnqnfc_nci_jni \
-    ls_nq_client \
-    nfc_nci.nqx.default.hw \
-    NQNfcNci \
-    se_nq_extn_client \
     SecureElement \
-    Tag \
+    NfcNci \
+    nqnfcee_access.xml \
+    nqnfcse_access.xml \
     vendor.nxp.hardware.nfc@1.0 \
     vendor.nxp.hardware.nfc@1.1 \
-    vendor.nxp.hardware.nfc@1.2-service \
-    vendor.nxp.nxpese@1.0:64 \
-    vendor.nxp.nxpnfc@1.0:64
+    Tag
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
@@ -447,7 +447,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-ASUS_I002D.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-ASUS_I002D.xml \
     $(LOCAL_PATH)/configs/permissions/public.libraries-qti-ext.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-qti.txt \
-    $(LOCAL_PATH)/configs/permissions/public.libraries-qti.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-qti.txt
+    $(LOCAL_PATH)/configs/permissions/public.libraries-qti.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/public.libraries-qti.txt \
+    $(LOCAL_PATH)/configs/permissions/asus.hardware.motor.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/asus.hardware.motor.xml \
+    $(LOCAL_PATH)/configs/permissions/asus.hardware.motor.latch_lock.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/asus.hardware.motor.latch_lock.xml
 
 # Power
 PRODUCT_PACKAGES += \
@@ -521,6 +523,25 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti
 
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.0 \
+    android.hardware.radio.deprecated@1.0 \
+    android.hardware.radio@1.4 \
+    android.hardware.radio@1.3 \
+    android.hardware.radio@1.2 \
+    android.hardware.radio@1.1 \
+    android.hardware.radio@1.0 \
+    android.hardware.radio.config@1.1 \
+    android.hardware.radio.config@1.0 \
+    android.hardware.radio.deprecated@1.0 \
+    android.hardware.secure_element@1.2 \
+    android.hardware.secure_element@1.1 \
+    android.hardware.secure_element@1.0 \
+    libprotobuf-cpp-full \
+    librmnetctl \
+    libxml2
+
 # Update engine
 PRODUCT_PACKAGES += \
     otapreopt_script \
@@ -581,6 +602,35 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     ZenParts
 
+# Additional tools
+PRODUCT_PACKAGES += \
+    dump.exfat \
+    fsck.exfat \
+    exfatlabel \
+    mkfs.exfat \
+    tune.exfat \
+    e2fsck \
+    fsck.exfat \
+    lsof \
+    mke2fs \
+    mkfs.exfat \
+    openvpn \
+    tune2fs \
+    mkfs.ntfs \
+    mount.ntfs \
+    fsck.ntfs \
+    mkshrc_vendor \
+    toybox_vendor \
+    sh_vendor \
+    vim \
+    vncflinger \
+    vncpasswd \
+    SystemWebView
+
+# Init
+PRODUCT_PACKAGES += \
+    libinit_zen
+    
 include vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk
 
 # Inherit from vendor blobs

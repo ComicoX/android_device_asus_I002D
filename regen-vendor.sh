@@ -158,7 +158,7 @@ VENDOR_SKIP_FILES_DEVICE=(
 
     # Camera
     #"etc/init/android.hardware.camera.provider@2.4-service_64.rc"
-    "bin/hw/android.hardware.camera.provider@2.4-service_64"
+    #"bin/hw/android.hardware.camera.provider@2.4-service_64"
     "lib/android.hardware.camera.provider@2.4-external.so"
     "lib/android.hardware.camera.provider@2.4-legacy.so"
     "lib/camera.device@1.0-impl.so"
